@@ -1,0 +1,17 @@
+{% extends 'base_views/navigation_base.html' %}
+
+{% block content %}
+<div class="body">
+    <h1>Enter your new data</h1>
+
+    <!-- Profile Edit Form -->
+    <div class="form">
+        <form method="POST" action="{% url 'profile edit' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <!-- Profile Edit Button -->
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+</div>
+{% endblock %}
